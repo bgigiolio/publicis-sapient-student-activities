@@ -32,7 +32,10 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     position: absolute;
     font-size: 90px;
-    color: sandybrown;
+    color: rgb(243, 206, 132);
     margin-top: 10%;
     margin-left: 50%;
+}
+#depth{
+    
 }
