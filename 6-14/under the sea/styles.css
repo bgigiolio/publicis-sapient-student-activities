@@ -1,0 +1,30 @@
+#sea {
+    height: 100vh;
+    background-color: aqua;
+}
+.bubble{
+    float: left;
+    width: 150px;
+}
+.fish{
+    position: absolute;
+}
+.fish2{
+    position: absolute;
+    /* margin-top: 200px; */
+}
+.fishb{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.shrimp{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#grass{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
+}
