@@ -28,3 +28,11 @@
     margin-top: 100px;
     margin-left: 100px;
 }
+.title{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: absolute;
+    font-size: 90px;
+    color: sandybrown;
+    margin-top: 10%;
+    margin-left: 50%;
+}
