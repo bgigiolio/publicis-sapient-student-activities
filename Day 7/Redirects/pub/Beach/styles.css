@@ -1,0 +1,15 @@
+.background {
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    position: absolute;
+}
+#beach{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+#map{
+    background-color: aqua;
+}

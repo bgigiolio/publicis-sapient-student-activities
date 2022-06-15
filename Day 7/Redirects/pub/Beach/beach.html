@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>THE BEAHC</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" href="./under the sea/fish2.png">
+    </head>
+    <body>
+        <div class="background">
+            <img src="beach.jpg" id="beach" usemap="#beachmap">
+            <map name="beachmap" >
+                <area id="map" shape="rect" coords="0,200,,350" alt="ocean" href="/ocean">
+              </map>
+        </div>
+<script>
+    let beach = document.getElementById("beach")
+    let wide =  beach.offsetWidth;
+    let high = beach.offsetHeight;
+    let map = document.getElementById("map")
+    map.coords = "0," + String(high * .45) + "," + String(wide) + "," + String(high * .52)
+</script>
+</body>
+</html>

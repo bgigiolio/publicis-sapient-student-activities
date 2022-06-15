@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formz📝</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="icon" href="fish2.png">
+</head>
+<body>
+<h1>Form</h1>
+<form onsubmit="return submity()">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname"> <br/>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname"> <br/><br/>
+
+    <label for="password">Password:</label>
+    <input type="text" id="password"> <br/><br/>
+
+    <label for="password2">Confirm Password:</label>
+    <input type="text" id="password2"> <br/><br/>
+
+    <label>Gender</label> <br/>
+    <input type="radio" id="Male" name="Gender" value="Male">
+    <label for="Male">Male</label>
+    <input type="radio" id="Female" name="Gender" value="Female">
+    <label for="Female">Female</label>
+    <input type="radio" id="Other" name="Gender" value="Other">
+    <label for="Other">Other</label><br><br>
+
+    <label>Skills</label> <br/>
+    <input type="checkbox" id="c" name="c" value="C">
+    <label for="vehicle1"> C</label><br>
+    <input type="checkbox" id="Java" name="c" value="Java">
+    <label for="vehicle2"> Java</label><br>
+    <input type="checkbox" id="JS" name="c" value="JS">
+    <label for="vehicle3"> JS</label><br><br>
+
+    <label>Qualifications</label> <br/>
+    <select name="qualifications" id="qualifications">
+        <option value="Degree">Degree</option>
+        <option value="Cool kid">Cool kid</option>
+        <option value="Cool hat">Cool hat</option>
+        <option value="Masters Degree">Masters Degree</option>
+      </select><br/><br/>
+    <label for="DOB">DOB:</label> <br/>
+    <input type="date" id="DOB" name="DOB"> <br/>
+    <input type="submit" value="Submit" onclick="submit()">
+</form>
+<p id="error"></p>
+<img src="fish2.png" alt="fishb" width="1500px" height="200px">
+<script>
+  function submity() { 
+    let fname = document.getElementById("fname").value
+    let lname = document.getElementById("lname").value
+    let password = document.getElementById("password").value
+    let password2 = document.getElementById("password2").value
+
+    let radios = document.getElementsByName("Gender")
+    let checked = false;
+    for (let index = 0; index < radios.length; index++) {
+      const radio = radios[index];
+      if (radio.checked){
+        checked = true;
+      }
+      
+    }
+
+    let checks = document.getElementsByName("c")
+    let schecked = false;
+    for (let index = 0; index < checks.length; index++) {
+      const ch = checks[index];
+      if (ch.checked){
+        schecked = true;
+      }
+      
+    }
+    console.log(fname)
+    if (fname.length < 4) {
+      alert("FIRST NAME TOO SHORT! Sorry " + fname);
+      console.log(fname)
+    }
+    else if (lname.length < 3){
+      alert("LAST NAME TOO SHORT! Sorry " + lname);
+    }
+    else if (password != password2){
+      alert("Passwords must match, dummy")
+    }
+    else if (!checked){
+      alert("Whats ya gender?")
+    }
+    else if (!schecked){
+      alert("No skills?")
+    }
+    return false;
+  }
+</script>
+</body>
+</html>

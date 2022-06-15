@@ -9,22 +9,22 @@
     <h1 class="title">The Ocean</h1>
     <div id="sea">
         <img id="grass" src="grass.webp" alt="fish" width="400px" height="500px">
-        <marquee id="fish" direction="Right"><img src="fish.png" alt="fish" ></marquee>
-        <marquee id="fish2" direction="Left"><img src="fish2.png" alt="fish" width="400px" height="500px"></marquee>
-        <marquee id="fishb" direction="down" behavior="alternate">
+        <marquee class="fish" id="fish" direction="Right"><img class="fishy" src="fish.png" alt="fish" ></marquee>
+        <marquee class="fish" id="fish2" direction="Left"><img class="fishy" src="fish2.png" alt="fish" width="400px" height="500px"></marquee>
+        <marquee class="fish" id="fishb" direction="down" behavior="alternate">
             <marquee behavior="alternate">
-                <img src="fishb.png" alt="fishb" width="200px" height="200px">
+                <img class="fishy" src="fishb.png" alt="fishb" width="200px" height="200px">
             </marquee>
           </marquee>
-        <marquee class="shrimp" direction="down" behavior="alternate"  scrollamount=25>
+        <marquee class="fish" id="shrimp" direction="down" behavior="alternate"  scrollamount=25>
         <marquee behavior="alternate">
-            <img src="shrimp.png" alt="shromp" width="60px" height="60px">
+            <img class="fishy" src="shrimp.png" alt="shromp" width="60px" height="60px">
         </marquee>
         </marquee>
 
-        <marquee class="shrimp" direction="up" behavior="alternate"  scrollamount=24>
+        <marquee class="fish" id="shrimp" direction="up" behavior="alternate"  scrollamount=24>
             <marquee behavior="alternate">
-                <img src="shrimp.png" alt="shromp" width="60px" height="60px">
+                <img class="fishy" src="shrimp.png" alt="shromp" width="60px" height="60px">
             </marquee>
             </marquee>
 
@@ -51,6 +51,25 @@
                 console.log(bubble)
             }
         };
+        let fishes = document.getElementsByClassName("fishy")
+        for (let index = 0; index < fishes.length; index++) {
+            const fish = fishes[index].parentElement;
+            console.log(fishes)
+            fish.onclick = function(){
+                console.log(fish.parentElement)
+                const dir = Math.random(Math.floor(Math.random() * 3))
+                let dirs = "up" 
+                if (dir === 0) {
+                    dirs = "down"
+                }else if(dir === 1){
+                    dirs = "left"
+                } else if (dir === 2){
+                    dirs = "right"
+                }
+                fish.direction = dirs
+            }
+            
+        }
     </script>
 
 </body>

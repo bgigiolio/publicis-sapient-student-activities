@@ -6,19 +6,19 @@
     float: left;
     width: 150px;
 }
-.fish{
+#fish{
     position: absolute;
 }
-.fish2{
+#fish2{
     position: absolute;
     /* margin-top: 200px; */
 }
-.fishb{
+#fishb{
     width: 100%;
     height: 100%;
     position: absolute;
 }
-.shrimp{
+#shrimp{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -35,4 +35,13 @@
     color: rgb(243, 206, 132);
     margin-top: 10%;
     margin-left: 50%;
+}
+.home{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: absolute;
+    font-size: 20px;
+    color: rgb(255, 123, 248);
+    margin-top: 20%;
+    margin-left: 50%;
+    z-index:1000
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Under tha sea</title>
+        <link rel="stylesheet" type="text/css" href="./under the sea/styles.css">
+        <link rel="icon" href="./under the sea/fish2.png">
+    </head>
+    <body>
+        <h1 class="title">The Ocean</h1>
+        <a href="/" class="home">Take me home 😓</a>
+    <div id="sea">
+        <img id="grass" src="./under the sea/grass.webp" alt="fish" width="400px" height="500px">
+        <marquee class="fish" id="fish" direction="Right"><img class="fishy" src="./under the sea/fish.png" alt="fish" ></marquee>
+        <marquee class="fish" id="fish2" direction="Left"><img class="fishy" src="./under the sea/fish2.png" alt="fish" width="400px" height="500px"></marquee>
+        <marquee class="fish" id="fishb" direction="down" behavior="alternate">
+            <marquee behavior="alternate">
+                <img class="fishy" src="./under the sea/fishb.png" alt="fishb" width="200px" height="200px">
+            </marquee>
+          </marquee>
+        <marquee class="fish" id="shrimp" direction="down" behavior="alternate"  scrollamount=25>
+        <marquee behavior="alternate">
+            <img class="fishy" src="./under the sea/shrimp.png" alt="shromp" width="60px" height="60px">
+        </marquee>
+        </marquee>
+
+        <marquee class="fish" id="shrimp" direction="up" behavior="alternate"  scrollamount=24>
+            <marquee behavior="alternate">
+                <img class="fishy" src="./under the sea/shrimp.png" alt="shromp" width="60px" height="60px">
+            </marquee>
+            </marquee>
+
+
+        <marquee class="bubble" direction="up" height="500px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="450px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="300px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="550px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="515px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="600px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="311px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+        <marquee class="bubble" direction="up" height="488px"><img class="bb" src="./under the sea/bubb.png" alt="blubble" width="70" height="70"></marquee>
+    </div>
+    <p id="depth">Under the sea!</p>
+    <script type="text/javascript">
+        let bubbles = document.getElementsByClassName("bb")
+        console.log(bubbles)
+        for (let index = 0; index < bubbles.length; index++) {
+            const bubble = bubbles[index];
+            console.log(bubble)
+            bubble.onclick = function(){
+                bubble.height = 0
+                bubble.style.display = "hidden"
+                console.log(bubble)
+            }
+        };
+        let fishes = document.getElementsByClassName("fishy")
+        for (let index = 0; index < fishes.length; index++) {
+            const fish = fishes[index].parentElement;
+            console.log(fishes)
+            fish.onclick = function(){
+                console.log(fish.parentElement)
+                const dir = Math.random(Math.floor(Math.random() * 3))
+                let dirs = "up" 
+                if (dir === 0) {
+                    dirs = "down"
+                }else if(dir === 1){
+                    dirs = "left"
+                } else if (dir === 2){
+                    dirs = "right"
+                }
+                fish.direction = dirs
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkers 🏁</title>
+<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+<!-- <link rel="icon" href="fish2.png"> -->
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    let counter = 0;
+    let color = 1;
+    for (let i = 0; i < 8; i++) {
+      for (let j = 0; j < 8; j++) {
+        counter++;
+        if(counter % 2 === 1){
+          ctx.beginPath()
+          color = color * -1;
+          let colors = "black"
+          if(color > 0){
+            colors = "white"
+          }
+          console.log(colors)
+          let ypos = i*50
+          let xpos = j*50
+  
+          ctx.strokeStyle = colors
+          ctx.fillRect(xpos, ypos, 50, 50)
+          ctx.stroke()
+        }
+      }
+      counter++
+    }
+  </script>
+</body>
+</html>

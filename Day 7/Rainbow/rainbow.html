@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rainbow 🌈</title>
+<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+<!-- <link rel="icon" href="fish2.png"> -->
+</head>
+<body>
+  <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    for (let i = 0; i < 8; i++) {
+        color = "red";
+        if (i === 1) {
+            color = "orange"
+        } else if (i===2){
+            color = "yellow"
+        } else if (i === 3){
+            color = "green"
+        } else if (i === 4){
+            color = "blue"
+        } else if (i === 5){
+            color = "indigo"
+        } else if (i === 6){
+            color = "violet"
+        } else if (i === 7){
+            color = "white"
+        }
+        
+        let radius = 300 - (i * 10)
+        console.log(radius)
+        ctx.beginPath();
+        ctx.fillStyle = color
+        ctx.arc(300, 300, radius, Math.PI, 0);
+        ctx.fill();
+
+    }
+  </script>
+</body>
+</html>
